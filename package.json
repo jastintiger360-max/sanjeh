@@ -1,0 +1,17 @@
+{
+  "name": "sanjeh",
+  "version": "0.1.0",
+  "private": true,
+  "description": "سنجه: سامانه طراحی سؤال، بانک سؤال هوشمند و آزمون آنلاین",
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-concurrency=1 --test-reporter=spec \"tests/*.test.js\"",
+    "create-admin": "node --disable-warning=ExperimentalWarning scripts/create-admin.js",
+    "backup": "node --disable-warning=ExperimentalWarning scripts/backup.js"
+  },
+  "optionalDependencies": {
+    "pg": "^8.13.0"
+  }
+}

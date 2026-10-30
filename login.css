@@ -1,0 +1,12 @@
+.login { min-height: 100vh; display: grid; place-items: center; padding: 20px; background:
+  repeating-linear-gradient(0deg, transparent 0 31px, oklch(0.94 0.02 18) 31px 32px), var(--paper); }
+.sheet { width: min(420px, 100%); background: var(--card); border: 1.5px solid var(--ink); border-radius: 6px; padding: 28px 28px 22px; position: relative; box-shadow: 0 24px 60px -30px oklch(0.4 0.1 18 / .5); }
+.sheet-head { border-bottom: 2px solid var(--ink); margin-bottom: 20px; padding-bottom: 12px; }
+.sheet h1 { font-size: 56px; color: var(--ink); margin: 6px 0 0; letter-spacing: -0.02em; }
+.marks { display: flex; gap: 6px; } .marks i { width: 12px; height: 6px; background: var(--graphite); }
+.marks i:nth-child(3n) { width: 6px; }
+.wide { width: 100%; justify-content: center; padding: 10px; font-size: 16px; }
+.err { color: var(--bad); min-height: 1.5em; font-size: 14px; }
+.bubbles { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
+.bubbles .bubble.filled { animation: fill 2.8s ease-in-out infinite alternate; }
+@keyframes fill { 0%, 40% { background: var(--card); color: var(--ink); border-color: var(--ink); } 60%, 100% { background: var(--graphite); color: var(--paper); border-color: var(--graphite); } }

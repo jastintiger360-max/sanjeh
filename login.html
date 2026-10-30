@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ورود</title>
+<link rel="stylesheet" href="/assets/base.css"><link rel="stylesheet" href="/assets/login.css">
+<script type="module" src="/assets/login.js"></script>
+</head>
+<body>
+<main class="login">
+  <section class="sheet" aria-labelledby="brand">
+    <div class="sheet-head">
+      <div class="marks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <h1 id="brand">سنجه</h1>
+      <p class="muted" id="tagline">طراحی سؤال، بانک سؤال و آزمون آنلاین</p>
+    </div>
+    <form id="f" novalidate>
+      <label class="field"><span>نام کاربری</span><input type="text" id="u" autocomplete="username" required dir="ltr"></label>
+      <label class="field"><span>رمز عبور</span><input type="password" id="p" autocomplete="current-password" required dir="ltr"></label>
+      <p id="err" class="err" role="alert"></p>
+      <button class="btn primary wide" type="submit" id="go">ورود</button>
+    </form>
+    <div class="bubbles" aria-hidden="true"><span class="bubble">۱</span><span class="bubble filled">۲</span><span class="bubble">۳</span><span class="bubble">۴</span></div>
+  </section>
+</main>
+</body>
+</html>

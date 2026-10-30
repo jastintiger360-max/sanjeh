@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    ports: ["8080:8080"]
+    volumes: ["sanjeh-data:/data"]
+    restart: unless-stopped
+  # برای PostgreSQL: DB_DRIVER=postgres و DATABASE_URL=postgres://sanjeh:CHANGE_ME@db:5432/sanjeh
+  db:
+    image: postgres:16
+    profiles: ["postgres"]
+    environment: { POSTGRES_USER: sanjeh, POSTGRES_PASSWORD: CHANGE_ME, POSTGRES_DB: sanjeh }
+    volumes: ["pg-data:/var/lib/postgresql/data"]
+volumes: { sanjeh-data: {}, pg-data: {} }
